@@ -1,4 +1,4 @@
-using Jogo2Julias;
+namespace Jogo2Julias;
 
 public class Gatinha:Personagens
 {
