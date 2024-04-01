@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Jogo2Julias.SegundaPage"
+             BackgroundColor="Black"
+             Shell.NavBarIsVisible="False">
+
+            <Image x:Name="imagem"  
+                Aspect="AspectFill"/>
+
+                 <Button Text="próximo"
+                Clicked="trocaanimal"
+                BackgroundColor="Black"
+                TextColor="White">
+             </ContentPage>

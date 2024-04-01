@@ -5,15 +5,15 @@
              Shell.NavBarIsVisible="False">
 
     <Grid>
-       <Image Source="fotocapa.png"
+       <Image Source="fotocapa.jpg"
             
               Aspect="AspectFill"/>
 
        <Label Text="PetCare"
               TextColor="#2f2f36"
               Margin="20,90,20,0"
-              FontFamily="Aqua Wow"
-              FontSize="50"
+              FontFamily="YorkGame-Regular"
+              FontSize="60"
               LineHeight="1.5"
               HorizontalOptions="Center"
               HorizontalTextAlignment="Center"
@@ -21,6 +21,7 @@
 
               <Button  Text="Iniciar"
            HeightRequest="50"
+           Clicked="BotaoIniciarFoiClicado"
            CornerRadius="25"
            BackgroundColor="#2f2f36"
            TextColor="White"
