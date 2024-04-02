@@ -5,9 +5,9 @@
              Shell.NavBarIsVisible="False">
 
     <Grid>
-       <Image Source="fotocapa.jpg"
-            
-              Aspect="AspectFill"/>
+       <Image
+        Source="fotocapa.jpg"
+        Aspect="AspectFill"/>
 
        <Label Text="PetCare"
               TextColor="#2f2f36"
@@ -19,7 +19,7 @@
               HorizontalTextAlignment="Center"
               VerticalOptions="Start"/>
 
-              <Button  Text="Iniciar"
+       <Button Text="Iniciar"
            HeightRequest="50"
            Clicked="BotaoIniciarFoiClicado"
            CornerRadius="25"

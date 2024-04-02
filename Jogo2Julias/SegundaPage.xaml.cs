@@ -31,6 +31,20 @@ public partial class SegundaPage : ContentPage
 
         imagem.Source=atual.GetNomeDaFoto();
     }
+    void trocadoisanimal(object sender, EventArgs args)
+    {
+        if (atual == gatinha)
+            atual = girafinha;
+        else if (atual == girafinha)
+            atual = macaquinho;
+        else if (atual == macaquinho)
+            atual = gatinha;
+
+
+        imagem.Source=atual.GetNomeDaFoto();
+    }
+
+    
  }
     
 

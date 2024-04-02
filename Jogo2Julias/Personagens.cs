@@ -1,10 +1,9 @@
 namespace Jogo2Julias;
 public class Personagens
 {
-protected Double Fome;
-protected Double Limpeza;
-protected Double Sono;
-protected Double Felicidade; 
+protected double Fome;
+protected double Sono;
+protected double Felicidade; 
 protected  string UrlDaFoto; 
 
 protected string nomedafoto;

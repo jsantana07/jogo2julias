@@ -2,14 +2,40 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Jogo2Julias.SegundaPage"
-             BackgroundColor="Black"
+             BackgroundColor="Pink"
              Shell.NavBarIsVisible="False">
+         
+         
+        <Grid>
+       
+         <Grid.RowDefinitions>
+                 <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                 <RowDefinition Height="*"/>
+          </Grid.RowDefinitions> 
 
-            <Image x:Name="imagem"  
-                Aspect="AspectFill"/>
+           <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+             <ColumnDefinition Width="*"/>
+           </Grid.ColumnDefinitions>
 
-                 <Button Text="próximo"
+         <Image x:Name="imagem"  
+         Aspect="AspectFill"
+               Grid.Row="0"
+            Grid.RowSpan="3"
+            Grid.Column="0"
+            Grid.ColumnSpan="3"/>
+
+             <ImageButton Source="setadireita.png"
                 Clicked="trocaanimal"
-                BackgroundColor="Black"
-                TextColor="White">
-             </ContentPage>
+                Grid.Row="3"
+                Grid.Column="3"/>
+
+                  <ImageButton Source="setaesquerda.png"
+                Clicked="trocadoisanimal"
+                Grid.Row="3"
+                Grid.Column="0"/>
+            
+      </Grid>
+</ContentPage>
