@@ -36,6 +36,37 @@
                 Clicked="trocadoisanimal"
                 Grid.Row="3"
                 Grid.Column="0"/>
-            
+
+                <Frame x:Name="botoes"
+                Padding="8"
+                WidthRequest="60"
+                BackgroundColor="#4c755b"
+                CornerRadius="30"
+                Margin="200,0,10,180"
+                 Grid.Row="1"
+                Grid.RowSpan="3"
+                Grid.Column="3"
+                HorizontalOptions="End"
+                VerticalOptions="Center">
+
+              <Grid>
+                <Grid.RowDefinitions>
+                 <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                 <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                 
+                  <ImageButton Source="smileface.png"
+              
+                Grid.Row="0"/>
+                   <ImageButton Source="pizzacerta.webp"
+               
+                Grid.Row="1"/>
+                   <ImageButton Source="luacerta.png"
+               
+                Grid.Row="2"/>
+          </Grid>
+            </Frame>
+          
       </Grid>
 </ContentPage>

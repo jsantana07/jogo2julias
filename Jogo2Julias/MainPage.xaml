@@ -31,6 +31,65 @@
            FontSize="18"
            FontFamily="Aqua Wow"
             VerticalOptions="End"/>
+
+             <Button Text="Sobre"
+              Clicked="BotaoSobreFoiClicado"
+              BorderColor="White"
+              BorderWidth="1"
+              HeightRequest="50"
+              CornerRadius="25"
+              BackgroundColor="#2f2f36"
+              TextColor="White"
+              FontSize="16"
+              FontFamily="Aqua Wow.tt"/>
+
+             <Frame x:Name="frameSobre"
+              IsVisible="False"
+              Margin="10,20"
+              CornerRadius="20"
+              BackgroundColor="#885bc7"
+              HorizontalOptions="Fill"
+              VerticalOptions="Fill">
+
+ <Grid>
+              <Grid.RowDefinitions>
+              <RowDefinition Height="90"/>
+              <RowDefinition Height="*"/>
+              <RowDefinition Height="60"/>
+              </Grid.RowDefinitions>
+              <Label Text="Sobre"
+               TextColor="White"
+               Margin="20"
+               FontSize="40"
+               FontFamily="Aqua Wow.tt"
+               HorizontalOptions="Center"
+               HorizontalTextAlignment="Center"
+               Grid.Row="0"/>
+
+               <Label Text="Aplicativo criado por Julia Reis Da Silva e Julia Rihane Santana, visando o aprendizado da linguagem c#, em aulas de desenvolvimento de aplicativos no terceiro ano do ensino médio, supervisionado pelo professor Thiago Macedo no colégio Sesi da Indústria de Apucarana."
+               CharacterSpacing="1"
+               LineHeight="1.5"
+               TextColor="White"
+               HorizontalOptions="Center"
+               HorizontalTextAlignment="Center"
+               VerticalOptions="Center"
+               FontSize="25"
+               FontFamily="Aqua Wow.ttf"
+               Grid.Row="1"/>
+
+                 <Button Text="voltar"
+                Clicked="BotaoVoltarFoiClicado"
+                HeightRequest="50"
+                CornerRadius="25"
+                BackgroundColor="#4d3173"
+                TextColor="White"
+                Margin="0,0,0,10"
+                FontSize="18"
+                FontFamily="Aqua Wow.ttf"
+                Grid.Row="3"/>
+
+</Grid>
+</Frame>
      </Grid>
 
 </ContentPage>

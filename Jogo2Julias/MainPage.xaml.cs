@@ -14,7 +14,14 @@ public partial class MainPage : ContentPage
   {
       Application.Current.MainPage = new SegundaPage();
   }
-
+ private void BotaoSobreFoiClicado(object sender, EventArgs args)
+  {
+    frameSobre.IsVisible = true;
+  }
+  private void BotaoVoltarFoiClicado(object sender, EventArgs args)
+  {
+    frameSobre.IsVisible = false;
+  }
 
 }
 
