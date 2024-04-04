@@ -4,37 +4,43 @@
              x:Class="Jogo2Julias.MainPage"
              Shell.NavBarIsVisible="False">
 
-    <Grid>
-       <Image
+<Grid>
+     <Image
         Source="fotocapa.jpg"
         Aspect="AspectFill"/>
 
-       <Label Text="PetCare"
-              TextColor="#2f2f36"
-              Margin="20,90,20,0"
-              FontFamily="YorkGame-Regular"
-              FontSize="60"
-              LineHeight="1.5"
-              HorizontalOptions="Center"
-              HorizontalTextAlignment="Center"
-              VerticalOptions="Start"/>
+     <Label Text="PetCare"
+          TextColor="#2f2f36"
+          Margin="20,90,20,0"
+          FontFamily="YorkGame-Regular"
+          FontSize="60"
+          LineHeight="1.5"
+          HorizontalOptions="Center"
+          HorizontalTextAlignment="Center"
+          VerticalOptions="Start"/>
 
-       <Button Text="Iniciar"
-           HeightRequest="50"
-           Clicked="BotaoIniciarFoiClicado"
-           CornerRadius="25"
-           BackgroundColor="#2f2f36"
-           TextColor="White"
-           BorderWidth="1"
-           BorderColor="White"
-           Margin="0,0,0,10"
-           FontSize="18"
-           FontFamily="Aqua Wow"
-            VerticalOptions="End"/>
+     <VerticalStackLayout
+              VerticalOptions="End"
+              Spacing="15"
+              Margin="15,100,15,0">
 
-             <Button Text="Sobre"
+          <Button Text="Iniciar"
+               HeightRequest="50"
+               Clicked="BotaoIniciarFoiClicado"
+               CornerRadius="25"
+               BackgroundColor="#2f2f36"
+               TextColor="White"
+               BorderWidth="1"
+               BorderColor="White"
+               Margin="0,50,0,0"
+               FontSize="18"
+               FontFamily="Aqua Wow.tt"
+               VerticalOptions="End"/>
+
+          <Button Text="Sobre"
               Clicked="BotaoSobreFoiClicado"
               BorderColor="White"
+              Margin="0,30,0,10"
               BorderWidth="1"
               HeightRequest="50"
               CornerRadius="25"
@@ -43,19 +49,22 @@
               FontSize="16"
               FontFamily="Aqua Wow.tt"/>
 
-             <Frame x:Name="frameSobre"
-              IsVisible="False"
-              Margin="10,20"
-              CornerRadius="20"
-              BackgroundColor="#885bc7"
-              HorizontalOptions="Fill"
-              VerticalOptions="Fill">
+     </VerticalStackLayout>
 
- <Grid>
+
+     <Frame x:Name="frameSobre"
+          IsVisible="False"
+          Margin="10,20"
+          CornerRadius="20"
+          BackgroundColor="#885bc7"
+          HorizontalOptions="Fill"
+          VerticalOptions="Fill">
+          
+          <Grid>
               <Grid.RowDefinitions>
-              <RowDefinition Height="90"/>
-              <RowDefinition Height="*"/>
-              <RowDefinition Height="60"/>
+                    <RowDefinition Height="90"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="60"/>
               </Grid.RowDefinitions>
               <Label Text="Sobre"
                TextColor="White"
@@ -73,8 +82,8 @@
                HorizontalOptions="Center"
                HorizontalTextAlignment="Center"
                VerticalOptions="Center"
-               FontSize="25"
-               FontFamily="Aqua Wow.ttf"
+               FontSize="21"
+               FontFamily="Aqua Wow.tt"
                Grid.Row="1"/>
 
                  <Button Text="voltar"
@@ -88,8 +97,9 @@
                 FontFamily="Aqua Wow.ttf"
                 Grid.Row="3"/>
 
+          </Grid>
+     </Frame>
+     
 </Grid>
-</Frame>
-     </Grid>
 
 </ContentPage>

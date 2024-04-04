@@ -6,67 +6,100 @@
              Shell.NavBarIsVisible="False">
          
          
-        <Grid>
-       
-         <Grid.RowDefinitions>
-                 <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                 <RowDefinition Height="*"/>
-          </Grid.RowDefinitions> 
+  <Grid>     
+    <Grid.RowDefinitions>
+      <RowDefinition Height="*"/>
+      <RowDefinition Height="*"/>
+      <RowDefinition Height="*"/>
+    </Grid.RowDefinitions> 
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="*"/>
+      <ColumnDefinition Width="*"/>
+      <ColumnDefinition Width="*"/>
+    </Grid.ColumnDefinitions>
 
-           <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-             <ColumnDefinition Width="*"/>
-           </Grid.ColumnDefinitions>
+    <Image x:Name="imagem"  
+           Aspect="AspectFill"
+           Grid.Row="0"
+           Grid.RowSpan="3"
+           Grid.Column="0"
+           Grid.ColumnSpan="3"/>
 
-         <Image x:Name="imagem"  
-         Aspect="AspectFill"
-               Grid.Row="0"
+    <ImageButton Source="setadireita.png"
+          Clicked="trocaanimal"
+          Grid.Row="3"
+          Grid.Column="3"/>
+
+    <ImageButton Source="setaesquerda.png"
+          Clicked="trocadoisanimal"
+          Grid.Row="3"
+          Grid.Column="0"/>
+
+    <Frame x:Name="botoes"
+            Padding="8"
+            WidthRequest="60"
+            BackgroundColor="#4c755b"
+            CornerRadius="30"
+            Margin="200,0,10,180"
+              Grid.Row="1"
             Grid.RowSpan="3"
-            Grid.Column="0"
-            Grid.ColumnSpan="3"/>
-
-             <ImageButton Source="setadireita.png"
-                Clicked="trocaanimal"
-                Grid.Row="3"
-                Grid.Column="3"/>
-
-                  <ImageButton Source="setaesquerda.png"
-                Clicked="trocadoisanimal"
-                Grid.Row="3"
-                Grid.Column="0"/>
-
-                <Frame x:Name="botoes"
-                Padding="8"
-                WidthRequest="60"
-                BackgroundColor="#4c755b"
-                CornerRadius="30"
-                Margin="200,0,10,180"
-                 Grid.Row="1"
-                Grid.RowSpan="3"
-                Grid.Column="3"
-                HorizontalOptions="End"
-                VerticalOptions="Center">
-
-              <Grid>
-                <Grid.RowDefinitions>
-                 <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                 <RowDefinition Height="*"/>
-                </Grid.RowDefinitions>
+            Grid.Column="3"
+            HorizontalOptions="End"
+            VerticalOptions="Center">
+      <Grid>
+        <Grid.RowDefinitions>
+          <RowDefinition Height="*"/>
+          <RowDefinition Height="*"/>
+          <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
                  
-                  <ImageButton Source="smileface.png"
-              
-                Grid.Row="0"/>
-                   <ImageButton Source="pizzacerta.webp"
-               
-                Grid.Row="1"/>
-                   <ImageButton Source="luacerta.png"
-               
-                Grid.Row="2"/>
-          </Grid>
-            </Frame>
-          
+        <ImageButton Source="smileface.png"   
+                     Grid.Row="0"/>
+                   
+        <ImageButton Source="pizzacerta.webp"       
+                     Grid.Row="1"/>
+                   
+        <ImageButton Source="luacerta.png"      
+                     Grid.Row="2"/>
       </Grid>
+    </Frame>
+
+    <Frame x:Name="barra"
+          Padding="8"
+          WidthRequest="60"
+          BackgroundColor="#4c755b"
+          CornerRadius="30"
+          Margin="0,0,0,200"
+          Grid.Row="0"
+          Grid.Column="0"
+          Grid.ColumnSpan="3"
+          HorizontalOptions="Center"
+          VerticalOptions="Start">
+      <Grid> 
+         <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+          </Grid.RowDefinitions> 
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="40"/>
+          </Grid.ColumnDefinitions>
+            <Image
+              Source="smileface.png"
+              Grid.Row="0"
+              Grid.Column="0"/>
+             <Image
+              Source="pizzacerta.webp"
+              Grid.Row="1"
+              Grid.Column="0"/>
+               <Image
+              Source="luacerta.png"
+              Grid.Row="2"
+              Grid.Column="0"/>
+
+
+      </Grid>
+    </Frame>
+  </Grid>
 </ContentPage>
