@@ -16,7 +16,8 @@ public partial class SegundaPage : ContentPage
         girafinha = new Girafinha();
 
         atual = gatinha;
-        imagem.Source=atual.GetNomeDaFoto();
+        imagem.Source=atual.GetNomeDaFoto()
+        AtualizaBarra();
 	}
 
     void trocaanimal(object sender, EventArgs args)
@@ -43,6 +44,18 @@ public partial class SegundaPage : ContentPage
 
         imagem.Source=atual.GetNomeDaFoto();
     }
+
+        void AtualizaBarra()
+        {
+            progressoalegria.Progress=atual.GetFelicidade();
+            progressofome.Progress=atual.GetFome();
+            progressosono.Progress=atual.GetSono();
+        }
+        void  smilefacefoiclicado(object sender, EventArgs args)
+  {
+        atual.SetFelicidade(atual.GetFelicidade()+0,1);
+        AtualizaBarra();
+  }
 
     
  }

@@ -10,7 +10,7 @@
     <Grid.RowDefinitions>
       <RowDefinition Height="*"/>
       <RowDefinition Height="*"/>
-      <RowDefinition Height="*"/>
+      <RowDefinition Height="100"/>
     </Grid.RowDefinitions> 
     <Grid.ColumnDefinitions>
       <ColumnDefinition Width="*"/>
@@ -26,55 +26,58 @@
            Grid.ColumnSpan="3"/>
 
     <ImageButton Source="setadireita.png"
-          Clicked="trocaanimal"
-          Grid.Row="3"
-          Grid.Column="3"/>
+                 BackgroundColor="#55007a27"
+                 Clicked="trocaanimal"
+                 Grid.Row="2"
+                 Grid.Column="3"/>
 
     <ImageButton Source="setaesquerda.png"
-          Clicked="trocadoisanimal"
-          Grid.Row="3"
-          Grid.Column="0"/>
+                 Clicked="trocadoisanimal"
+                 Grid.Row="2"
+                 Grid.Column="0"/>
 
     <Frame x:Name="botoes"
             Padding="8"
             WidthRequest="60"
+            Margin="0,0,10,0"
             BackgroundColor="#4c755b"
             CornerRadius="30"
-            Margin="200,0,10,180"
-              Grid.Row="1"
+            Grid.Row="1"
             Grid.RowSpan="3"
             Grid.Column="3"
             HorizontalOptions="End"
-            VerticalOptions="Center">
-      <Grid>
+            VerticalOptions="Start">
+      <Grid RowSpacing="20">
         <Grid.RowDefinitions>
           <RowDefinition Height="*"/>
           <RowDefinition Height="*"/>
           <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
                  
-        <ImageButton Source="smileface.png"   
+        <ImageButton Source="smileface.png" 
+                     BackgroundColor="#4c755b" 
+                     Clicked="smilefacefoiclicado"  
                      Grid.Row="0"/>
                    
         <ImageButton Source="pizzacerta.webp"       
+                     BackgroundColor="#4c755b"
                      Grid.Row="1"/>
                    
-        <ImageButton Source="luacerta.png"      
+        <ImageButton Source="luacerta.png"    
+                     BackgroundColor="#4c755b"  
                      Grid.Row="2"/>
       </Grid>
     </Frame>
 
     <Frame x:Name="barra"
-          Padding="8"
-          WidthRequest="60"
+          Padding="4"
+          Margin="10, 10, 10, 0"
+          HeightRequest="100"
           BackgroundColor="#4c755b"
           CornerRadius="30"
-          Margin="0,0,0,200"
+          VerticalOptions="Start"
           Grid.Row="0"
-          Grid.Column="0"
-          Grid.ColumnSpan="3"
-          HorizontalOptions="Center"
-          VerticalOptions="Start">
+          Grid.ColumnSpan="3">
       <Grid> 
          <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
@@ -82,8 +85,8 @@
             <RowDefinition Height="*"/>
           </Grid.RowDefinitions> 
           <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="40"/>
+            <ColumnDefinition Width="*"/>
           </Grid.ColumnDefinitions>
             <Image
               Source="smileface.png"
@@ -97,6 +100,22 @@
               Source="luacerta.png"
               Grid.Row="2"
               Grid.Column="0"/>
+
+              <ProgressBar x:Name="progressofome"
+                            Progress="0.5"
+                            Grid.Row="0"
+                            Grid.Column="1"/>
+
+                            
+              <ProgressBar x:Name="progressosono"
+                            Progress="0.5"
+                            Grid.Row="1"
+                            Grid.Column="1"/>
+
+             <ProgressBar x:Name="progressoalegria"
+                          Progress="0.5"
+                          Grid.Row="2"
+                          Grid.Column="1"/>
 
 
       </Grid>
