@@ -16,8 +16,13 @@ public partial class SegundaPage : ContentPage
         girafinha = new Girafinha();
 
         atual = gatinha;
-        imagem.Source=atual.GetNomeDaFoto()
+        imagem.Source=atual.GetNomeDaFoto();
         AtualizaBarra();
+        var timer=Application.Current.Dispatcher.CreateTimer();
+        timer.Interval=TimeSpan.FromSeconds(10);
+        timer.Tick+=(s,e)=>
+         PassarTempo();
+         timer.Start();
 	}
 
     void trocaanimal(object sender, EventArgs args)
@@ -43,6 +48,8 @@ public partial class SegundaPage : ContentPage
 
 
         imagem.Source=atual.GetNomeDaFoto();
+        AtualizaBarra();
+        PassarTempo();
     }
 
         void AtualizaBarra()
@@ -53,13 +60,28 @@ public partial class SegundaPage : ContentPage
         }
         void  smilefacefoiclicado(object sender, EventArgs args)
   {
-        atual.SetFelicidade(atual.GetFelicidade()+0,1);
+        atual.SetFelicidade(atual.GetFelicidade()+0.1);
         AtualizaBarra();
   }
-
+  void  botaocomidafoiclicado(object sender, EventArgs args)
+  {
+        atual.SetFome(atual.GetFome()+0.1);
+        AtualizaBarra();
+  }
+   void  botaosonofoiclicado(object sender, EventArgs args)
+  {
+        atual.SetSono(atual.GetSono()+0.1);
+        AtualizaBarra();
+  }
+void PassarTempo()
+{
+    atual.SetFelicidade(atual.GetFelicidade()-0.1);
+     atual.SetFome(atual.GetFome()-0.1);
+     atual.SetSono(atual.GetSono()-0.1);
+     AtualizaBarra();
     
  }
-    
+   }  
 
 
             

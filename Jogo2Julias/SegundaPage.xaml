@@ -26,7 +26,6 @@
            Grid.ColumnSpan="3"/>
 
     <ImageButton Source="setadireita.png"
-                 BackgroundColor="#55007a27"
                  Clicked="trocaanimal"
                  Grid.Row="2"
                  Grid.Column="3"/>
@@ -39,7 +38,7 @@
     <Frame x:Name="botoes"
             Padding="8"
             WidthRequest="60"
-            Margin="0,0,10,0"
+            Margin="0,0,10,100"
             BackgroundColor="#4c755b"
             CornerRadius="30"
             Grid.Row="1"
@@ -61,10 +60,12 @@
                    
         <ImageButton Source="pizzacerta.webp"       
                      BackgroundColor="#4c755b"
+                     Clicked="botaocomidafoiclicado" 
                      Grid.Row="1"/>
                    
         <ImageButton Source="luacerta.png"    
                      BackgroundColor="#4c755b"  
+                     Clicked="botaosonofoiclicado" 
                      Grid.Row="2"/>
       </Grid>
     </Frame>
@@ -101,24 +102,23 @@
               Grid.Row="2"
               Grid.Column="0"/>
 
-              <ProgressBar x:Name="progressofome"
+              <ProgressBar x:Name="progressoalegria"
                             Progress="0.5"
                             Grid.Row="0"
                             Grid.Column="1"/>
 
                             
-              <ProgressBar x:Name="progressosono"
+              <ProgressBar x:Name="progressofome"
                             Progress="0.5"
                             Grid.Row="1"
                             Grid.Column="1"/>
 
-             <ProgressBar x:Name="progressoalegria"
+             <ProgressBar x:Name="progressosono"
                           Progress="0.5"
                           Grid.Row="2"
                           Grid.Column="1"/>
-
-
       </Grid>
     </Frame>
+ 
   </Grid>
 </ContentPage>
