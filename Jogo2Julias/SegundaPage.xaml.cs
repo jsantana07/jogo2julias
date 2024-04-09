@@ -75,12 +75,21 @@ public partial class SegundaPage : ContentPage
   }
 void PassarTempo()
 {
+    var estavaMorto=atual.GetMorto();
     atual.SetFelicidade(atual.GetFelicidade()-0.1);
      atual.SetFome(atual.GetFome()-0.1);
      atual.SetSono(atual.GetSono()-0.1);
      AtualizaBarra();
-    
+     if (estavaMorto != atual.GetMorto())
+      imagem.Source=atual.GetNomeDaFoto();
+
+    if (gatinha.GetMorto()&&
+        macaquinho.GetMorto()&&
+        girafinha.GetMorto())
+         Application.Current.MainPage = new GameoverPage();
+      
  }
+
    }  
 
 

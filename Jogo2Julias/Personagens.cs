@@ -51,7 +51,7 @@ public void SetSono (double s)
         Sono=0;
     }
     else
-    Sono=S;
+    Sono=s;
 }
 public double GetSono()
 {
@@ -74,5 +74,8 @@ public double GetFelicidade()
 {
     return Felicidade;
 }
-
+    public bool GetMorto()
+    {
+        return morto;
+    }
 }
