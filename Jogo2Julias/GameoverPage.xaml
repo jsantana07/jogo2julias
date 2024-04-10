@@ -10,6 +10,11 @@
           <RowDefinition Height="*"/>
           <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
+
+        <Image
+        Source="gameovercerta.webp"
+        Aspect="AspectFill"/>
+
         <Label Text="Você perdeu!"
               TextColor="White"
               BackgroundColor="#2f2f36"

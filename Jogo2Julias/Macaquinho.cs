@@ -5,9 +5,9 @@ public class Macaquinho:Personagens
     {
         nomedafoto="macaquinho.jpg";
         nomedafotomorto="cruzzz.png";
-         Fome=0.01;
-        Felicidade=0.05;
-        Sono=0.2;
+         Fome=1;
+        Felicidade=1;
+        Sono=1;
     }
     
 }

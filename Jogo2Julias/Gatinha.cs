@@ -6,9 +6,9 @@ public class Gatinha:Personagens
     {
         nomedafoto="gatinha.jpg";
         nomedafotomorto="cruz.png";
-         Fome=0.01;
-        Felicidade=0.05;
-        Sono=0.2;
+         Fome=0.6;
+        Felicidade=0.6;
+        Sono=0.6;
     }
     
 }

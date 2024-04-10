@@ -8,6 +8,8 @@ public partial class SegundaPage : ContentPage
 
     Personagens atual;
 
+    IDispatcherTimer timer;
+
     public SegundaPage()
 	{
 		InitializeComponent();
@@ -18,14 +20,14 @@ public partial class SegundaPage : ContentPage
         atual = gatinha;
         imagem.Source=atual.GetNomeDaFoto();
         AtualizaBarra();
-        var timer=Application.Current.Dispatcher.CreateTimer();
-        timer.Interval=TimeSpan.FromSeconds(10);
+        timer=Application.Current.Dispatcher.CreateTimer();
+        timer.Interval=TimeSpan.FromSeconds(3);
         timer.Tick+=(s,e)=>
          PassarTempo();
          timer.Start();
 	}
 
-    void trocaanimal(object sender, EventArgs args)
+    void TrocaAnimalDireita(object sender, EventArgs args)
     {
         if (atual == gatinha)
             atual = macaquinho;
@@ -34,22 +36,36 @@ public partial class SegundaPage : ContentPage
         else if (atual == girafinha)
             atual = gatinha;
 
-
-        imagem.Source=atual.GetNomeDaFoto();
+        TrocaAnimal();
     }
-    void trocadoisanimal(object sender, EventArgs args)
+    void TrocaAnimalEsquerda(object sender, EventArgs args)
     {
         if (atual == gatinha)
             atual = girafinha;
         else if (atual == girafinha)
             atual = macaquinho;
         else if (atual == macaquinho)
-            atual = gatinha;
+            atual = gatinha;     
 
+        TrocaAnimal();   
+    }
 
+    void TrocaAnimal()
+    {
         imagem.Source=atual.GetNomeDaFoto();
         AtualizaBarra();
-        PassarTempo();
+
+
+        if (atual.GetMorto())
+        {
+            botoes.IsVisible=false;
+            barra.IsVisible=false;
+        }
+        else
+        {
+            botoes.IsVisible=true;         
+            barra.IsVisible=true; 
+        }
     }
 
         void AtualizaBarra()
@@ -59,36 +75,51 @@ public partial class SegundaPage : ContentPage
             progressosono.Progress=atual.GetSono();
         }
         void  smilefacefoiclicado(object sender, EventArgs args)
-  {
-        atual.SetFelicidade(atual.GetFelicidade()+0.1);
-        AtualizaBarra();
-  }
-  void  botaocomidafoiclicado(object sender, EventArgs args)
-  {
-        atual.SetFome(atual.GetFome()+0.1);
-        AtualizaBarra();
-  }
-   void  botaosonofoiclicado(object sender, EventArgs args)
-  {
-        atual.SetSono(atual.GetSono()+0.1);
-        AtualizaBarra();
-  }
-void PassarTempo()
-{
-    var estavaMorto=atual.GetMorto();
-    atual.SetFelicidade(atual.GetFelicidade()-0.1);
-     atual.SetFome(atual.GetFome()-0.1);
-     atual.SetSono(atual.GetSono()-0.1);
-     AtualizaBarra();
-     if (estavaMorto != atual.GetMorto())
-      imagem.Source=atual.GetNomeDaFoto();
+        {
+            atual.SetFelicidade(atual.GetFelicidade()+0.1);
+            AtualizaBarra();
+        }
+        void  botaocomidafoiclicado(object sender, EventArgs args)
+        {
+            atual.SetFome(atual.GetFome()+0.1);
+            AtualizaBarra();
+        }
+        void  botaosonofoiclicado(object sender, EventArgs args)
+        {
+            atual.SetSono(atual.GetSono()+0.1);
+            AtualizaBarra();
+        }
+        void PassarTempo()
+        {
+            var estavaMorto=atual.GetMorto();
+            gatinha.SetFelicidade(gatinha.GetFelicidade()-0.1);
+            macaquinho.SetFelicidade(macaquinho.GetFelicidade()-0.1);
+            girafinha.SetFelicidade(girafinha.GetFelicidade()-0.1);
+            gatinha.SetFome(gatinha.GetFome()-0.1);
+            macaquinho.SetFome(macaquinho.GetFome()-0.1);
+            girafinha.SetFome(girafinha.GetFome()-0.1);
+            gatinha.SetSono(gatinha.GetSono()-0.1);
+            macaquinho.SetSono(macaquinho.GetSono()-0.1);
+            girafinha.SetSono(girafinha.GetSono()-0.1);
+            AtualizaBarra();
+            if (estavaMorto != atual.GetMorto())
+            {
+                imagem.Source=atual.GetNomeDaFoto();
+                botoes.IsVisible=false;
+                barra.IsVisible=false;
+                
+                
+            }
 
-    if (gatinha.GetMorto()&&
-        macaquinho.GetMorto()&&
-        girafinha.GetMorto())
-         Application.Current.MainPage = new GameoverPage();
-      
- }
+            
+            if (gatinha.GetMorto()&&
+                macaquinho.GetMorto()&&
+                girafinha.GetMorto())
+            {
+                Application.Current.MainPage = new GameoverPage();
+                timer.Stop();
+            }
+        }
 
    }  
 

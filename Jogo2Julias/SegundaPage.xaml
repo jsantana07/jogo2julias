@@ -26,12 +26,12 @@
            Grid.ColumnSpan="3"/>
 
     <ImageButton Source="setadireita.png"
-                 Clicked="trocaanimal"
+                 Clicked="TrocaAnimalDireita"
                  Grid.Row="2"
                  Grid.Column="3"/>
 
     <ImageButton Source="setaesquerda.png"
-                 Clicked="trocadoisanimal"
+                 Clicked="TrocaAnimalEsquerda"
                  Grid.Row="2"
                  Grid.Column="0"/>
 

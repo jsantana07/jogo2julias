@@ -18,9 +18,9 @@ public Personagens()
 public string GetNomeDaFoto()
 {
     if(morto)
-    return nomedafotomorto;
+        return nomedafotomorto;
     else
-    return nomedafoto;
+        return nomedafoto;
     
 }
 

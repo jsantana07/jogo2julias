@@ -5,8 +5,8 @@ public class Girafinha:Personagens
     {
         nomedafoto="girafinha.jpg";
          nomedafotomorto="cruzz.png";
-        Fome=0.01;
-        Felicidade=0.05;
-        Sono=0.2;
+        Fome=0.8;
+        Felicidade=0.8;
+        Sono=0.8;
     }
 }
